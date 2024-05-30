@@ -10,15 +10,17 @@ const headingFont =localFont({
 })
 export const Logo = () => {
     return (
-        <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">  
        <Link href="/">
-<Image src="/logo.png" alt="logo" width={100} height={100} />
+                <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">  
+
+<Image src="/logo.png" alt="logo" width={40} height={40} />
 
        
-       <p className={cn("text-3xl font-bold text-neutral-700 pb-1",headingFont.className)}>
+       <p className={cn("text-3xl font-bold text-neutral-700",headingFont.className)}>
         Frello
        </p>
-       </Link>
        </div>
+
+       </Link>
     );
 }

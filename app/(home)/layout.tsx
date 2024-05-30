@@ -1,3 +1,4 @@
+import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
@@ -8,7 +9,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
             <main className="pt-40 pb-20 bg-slate-100">
                 {children}
             </main>
-   {/*Footer */}
+ <Footer />
         </div>
     );
 };
