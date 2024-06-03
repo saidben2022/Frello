@@ -8,7 +8,8 @@ import { NextResponse } from 'next/server';
     '/organization(.*)',
     '/board(.*)',
     '/select-org',
-    '/api/cards(.*)'
+    '/api/cards(.*)',
+
   ])
   
   export default clerkMiddleware((auth,req,event)=>{

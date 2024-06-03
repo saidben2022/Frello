@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Activity,Layout,Settings,CreditCard } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 export type Organization={
     id:string;
     slug:string;
@@ -53,6 +54,8 @@ const routes=[
     }
 ];
 const onClick=(href:string)=>{
+
+
     router.push(href);
 }
     return( 
@@ -65,7 +68,6 @@ const onClick=(href:string)=>{
           src={organization.imageUrl}
            alt={organization.name} 
            className="rounded-sm object-cover" />
-          
     </div>
     <span className="font-medium text-small">
         {organization.name}
@@ -74,6 +76,8 @@ const onClick=(href:string)=>{
             </AccordionTrigger>
             <AccordionContent className="pt-1 text-neutral-700 ">
 {routes.map((route)=>{
+  
+       
     return (<Button 
     key={route.href} 
     variant={"ghost"} 
@@ -89,3 +93,14 @@ const onClick=(href:string)=>{
     )
    
 }
+NavItem.Skeleton=function SkeletonNavItem(){
+    return(
+        
+<div className="flex items-center gap-x-2">
+    <div className="w-10 h-10 relative shrink-0">
+          <Skeleton className="w-full h-full absolute"/>
+    </div>  
+    <Skeleton className="h-10 w-full"/>
+
+    </div>
+    )}
