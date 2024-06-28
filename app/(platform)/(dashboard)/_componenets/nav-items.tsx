@@ -47,11 +47,11 @@ const routes=[
         icon:<Settings className="w-4 h-4 mr-2"/>,
         href:`/organization/${organization.id}/settings`
     },
-    {
-        label:"Billings",
-        icon:<CreditCard className="w-4 h-4 mr-2"/>,
-        href:`/organization/${organization.id}/billing`
-    }
+    // {
+    //     label:"Billings",
+    //     icon:<CreditCard className="w-4 h-4 mr-2"/>,
+    //     href:`/organization/${organization.id}/billing`
+    // }
 ];
 const onClick=(href:string)=>{
 
